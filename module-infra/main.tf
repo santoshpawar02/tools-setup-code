@@ -40,7 +40,7 @@ resource "aws_route53_record" "private" {
   name    = "${var.name}-private"
   type    = "A"
   ttl     = 10
-  records = [aws_instance.instance.private_ip]
+  records = [aws_instance.tool.private_ip]
 }
 
 resource "aws_route53_record" "public" {
@@ -48,5 +48,5 @@ resource "aws_route53_record" "public" {
   name    = var.name
   type    = "A"
   ttl     = 10
-  records = [aws_instance.instance.public_ip]
+  records = [aws_instance.tool.public_ip]
 }
