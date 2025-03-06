@@ -11,7 +11,7 @@ variable "ami_id" {
 }
 
 variable "zone_id" {
-  default = "Z03957642SAJK5S8LZ7FG"
+  default = "Z08185552UDEVF77G5L7L"
 }
 
 variable "tools" {
