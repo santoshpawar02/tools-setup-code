@@ -15,12 +15,19 @@ resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
   to_port = 22
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
+resource "aws_vpc_security_group_ingress_rule" "app_port" {
   security_group_id = aws_security_group.tool.id
-  cidr_ipv4 = "0.0.0.0/0"
-  from_port = var.port
-  ip_protocol = "tcp"
-  to_port = var.port
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = var.port
+  ip_protocol       = "tcp"
+  to_port           = var.port
+  description       = var.name
+}
+
+resource "aws_vpc_security_group_egress_rule" "egress_allow_all" {
+  security_group_id = aws_security_group.tool.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "-1"
 }
 
 
@@ -37,7 +44,7 @@ resource "aws_instance" "tool" {
 
 resource "aws_route53_record" "private" {
   zone_id = var.zone_id
-  name    = "${var.name}-private"
+  name    = "${var.name}-internal"
   type    = "A"
   ttl     = 10
   records = [aws_instance.tool.private_ip]
