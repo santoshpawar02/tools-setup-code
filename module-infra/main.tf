@@ -3,7 +3,7 @@ resource "aws_security_group" "tool" {
   description = "${var.name} Security Group"
 
   tags = {
-    name = "${var.name}-sg" 
+    Name = "${var.name}-sg" 
   }
 }
 
@@ -33,10 +33,17 @@ resource "aws_vpc_security_group_egress_rule" "egress_allow_all" {
 
 
 resource "aws_instance" "tool" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.tool.id]
 
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      instance_interruption_behavior = "stop"
+      spot_instance_type             = "persistent"
+    }
+  }
   tags = {
     name = var.name  
   }
