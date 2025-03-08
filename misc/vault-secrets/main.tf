@@ -43,8 +43,8 @@ resource "vault_generic_secret" "roboshop-dev-cart" {
 
   data_json = <<EOT
 {
-"REDIS_HOST":   "redis-dev.rdevopsb83.online",
-"CATALOGUE_HOST": "catalogue-dev.rdevopsb83.online",
+"REDIS_HOST":   "redis-dev.santoshpawar.site",
+"CATALOGUE_HOST": "catalogue-dev.santoshpawar.site",
 "CATALOGUE_PORT": "8080"
 }
 EOT
@@ -56,7 +56,7 @@ resource "vault_generic_secret" "roboshop-dev-catalogue" {
   data_json = <<EOT
 {
 "MONGO":   "true",
-"MONGO_URL": "mongodb://mongodb-dev.rdevopsb83.online:27017/catalogue"
+"MONGO_URL": "mongodb://mongodb-dev.santoshpawar.site:27017/catalogue"
 }
 EOT
 }
@@ -66,11 +66,11 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 
   data_json = <<EOT
 {
-"catalogue":   "http://catalogue-dev.rdevopsb83.online:8080/",
-"user":   "http://user-dev.rdevopsb83.online:8080/",
-"cart":   "http://cart-dev.rdevopsb83.online:8080/",
-"shipping":   "http://shipping-dev.rdevopsb83.online:8080/",
-"payment":   "http://payment-dev.rdevopsb83.online:8080/"
+"catalogue":   "http://catalogue-dev.santoshpawar.site:8080/",
+"user":   "http://user-dev.santoshpawar.site:8080/",
+"cart":   "http://cart-dev.santoshpawar.site:8080/",
+"shipping":   "http://shipping-dev.santoshpawar.site:8080/",
+"payment":   "http://payment-dev.santoshpawar.site:8080/"
 }
 EOT
 }
@@ -80,11 +80,11 @@ resource "vault_generic_secret" "roboshop-dev-payment" {
 
   data_json = <<EOT
 {
-"CART_HOST" : "cart-dev.rdevopsb83.online",
+"CART_HOST" : "cart-dev.santoshpawar.site",
 "CART_PORT" : 8080,
-"USER_HOST" : "user-dev.rdevopsb83.online",
+"USER_HOST" : "user-dev.santoshpawar.site",
 "USER_PORT" : 8080,
-"AMQP_HOST" : "rabbitmq-dev.rdevopsb83.online",
+"AMQP_HOST" : "rabbitmq-dev.santoshpawar.site",
 "AMQP_USER" : "roboshop",
 "AMQP_PASS" : "roboshop123"
 }
@@ -96,8 +96,8 @@ resource "vault_generic_secret" "roboshop-dev-shipping" {
 
   data_json = <<EOT
 {
-"CART_ENDPOINT" : "cart-dev.rdevopsb83.online:8080",
-"DB_HOST" : "mysql-dev.rdevopsb83.online"
+"CART_ENDPOINT" : "cart-dev.santoshpawar.site:8080",
+"DB_HOST" : "mysql-dev.santoshpawar.site"
 }
 EOT
 }
@@ -108,8 +108,8 @@ resource "vault_generic_secret" "roboshop-dev-user" {
   data_json = <<EOT
 {
 "MONGO" : "true",
-"REDIS_URL" : "redis://redis-dev.rdevopsb83.online:6379",
-"MONGO_URL" : "mongodb://mongodb-dev.rdevopsb83.online:27017/users"
+"REDIS_URL" : "redis://redis-dev.santoshpawar.site:6379",
+"MONGO_URL" : "mongodb://mongodb-dev.santoshpawar.site:27017/users"
 }
 EOT
 }
