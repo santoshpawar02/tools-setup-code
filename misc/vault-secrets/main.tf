@@ -70,26 +70,26 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
 "shipping":   "http://shipping-dev.santoshpawar.site:8080/",
-"payment":   "http://payment-dev.santoshpawar.site:8080/"
+# "payment":   "http://payment-dev.santoshpawar.site:8080/"
 }
 EOT
 }
 
-resource "vault_generic_secret" "roboshop-dev-payment" {
-  path = "${vault_mount.roboshop-dev.path}/payment"
+# resource "vault_generic_secret" "roboshop-dev-payment" {
+#   path = "${vault_mount.roboshop-dev.path}/payment"
 
-  data_json = <<EOT
-{
-"CART_HOST" : "cart-dev.santoshpawar.site",
-"CART_PORT" : 8080,
-"USER_HOST" : "user-dev.santoshpawar.site",
-"USER_PORT" : 8080,
-"AMQP_HOST" : "rabbitmq-dev.santoshpawar.site",
-"AMQP_USER" : "roboshop",
-"AMQP_PASS" : "roboshop123"
-}
-EOT
-}
+#   data_json = <<EOT
+# {
+# "CART_HOST" : "cart-dev.santoshpawar.site",
+# "CART_PORT" : 8080,
+# "USER_HOST" : "user-dev.santoshpawar.site",
+# "USER_PORT" : 8080,
+# "AMQP_HOST" : "rabbitmq-dev.santoshpawar.site",
+# "AMQP_USER" : "roboshop",
+# "AMQP_PASS" : "roboshop123"
+# }
+# EOT
+# }
 
 resource "vault_generic_secret" "roboshop-dev-shipping" {
   path = "${vault_mount.roboshop-dev.path}/shipping"
