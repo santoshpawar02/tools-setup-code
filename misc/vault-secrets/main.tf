@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "testtfbuc2"
+    bucket = "testtfbuc"
     key = "vault-secrets/state"
     region = "us-east-1"
     }
