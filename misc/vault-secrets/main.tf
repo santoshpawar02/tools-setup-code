@@ -69,8 +69,7 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "catalogue":   "http://catalogue-dev.santoshpawar.site:8080/",
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
-"shipping":   "http://shipping-dev.santoshpawar.site:8080/",
-
+"shipping":   "http://shipping-dev.santoshpawar.site:8080/"
 }
 EOT
 }
