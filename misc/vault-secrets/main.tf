@@ -70,10 +70,12 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
 "shipping":   "http://shipping-dev.santoshpawar.site:8080/",
-# "payment":   "http://payment-dev.santoshpawar.site:8080/"
+
 }
 EOT
 }
+
+# "payment":   "http://payment-dev.santoshpawar.site:8080/" ## remove from above block
 
 # resource "vault_generic_secret" "roboshop-dev-payment" {
 #   path = "${vault_mount.roboshop-dev.path}/payment"
