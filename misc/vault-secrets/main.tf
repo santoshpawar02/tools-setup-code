@@ -56,7 +56,7 @@ resource "vault_generic_secret" "roboshop-dev-catalogue" {
   data_json = <<EOT
 {
 "MONGO":   "true",
-"MONGO_URL": "mongodb://mongodb-dev.santoshpawar.site:27017/catalogue"
+"MONGO_URL": "mongodb://mongo-dev.santoshpawar.site:27017/catalogue"
 }
 EOT
 }
@@ -110,7 +110,7 @@ resource "vault_generic_secret" "roboshop-dev-user" {
 {
 "MONGO" : "true",
 "REDIS_URL" : "redis://redis-dev.santoshpawar.site:6379",
-"MONGO_URL" : "mongodb://mongodb-dev.santoshpawar.site:27017/users"
+"MONGO_URL" : "mongodb://mongo-dev.santoshpawar.site:27017/users"
 }
 EOT
 }
