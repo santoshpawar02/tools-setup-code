@@ -56,7 +56,7 @@ resource "vault_generic_secret" "roboshop-dev-catalogue" {
   data_json = <<EOT
 {
 "MONGO":   "true",
-"MONGO_URL": "mongodb://mongo-dev.santoshpawar.site:27017/catalogue"
+"MONGO_URL": "mongodb://mongo-dev.santoshpawar.site:27017/catalogue",
 "DB_TYPE": "mongo",
 "APP_GIT_URL" : "https://github.com/roboshop-devops-project-v3/catalogue",
 "DB_HOST" : "mongo-dev.santoshpawar.site",
@@ -81,7 +81,7 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "CART_HOST" : "cart-dev.santoshpawar.site",
 "CART_PORT" : "8080",
 "SHIPPING_HOST" : "shipping-dev.santoshpawar.site",
-"SHIPPING_PORT" : "8080",
+"SHIPPING_PORT" : "8080"
 }
 EOT
 }
