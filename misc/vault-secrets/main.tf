@@ -57,6 +57,10 @@ resource "vault_generic_secret" "roboshop-dev-catalogue" {
 {
 "MONGO":   "true",
 "MONGO_URL": "mongodb://mongo-dev.santoshpawar.site:27017/catalogue"
+"DB_TYPE": "mongo",
+"APP_GIT_URL" : "https://github.com/roboshop-devops-project-v3/catalogue",
+"DB_HOST" : "mongo-dev.santoshpawar.site",
+"SCHEMA_FILE" : "db/master-data.js"
 }
 EOT
 }
@@ -70,11 +74,22 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
 "shipping":   "http://shipping-dev.santoshpawar.site:8080/"
+"CATALOGUE_HOST" : "catalogue-dev.santoshpawar.site",
+"CATALOGUE_PORT" : "8080",
+"USER_HOST" : "user-dev.santoshpawar.site",
+"USER_PORT" : "8080",
+"CART_HOST" : "cart-dev.santoshpawar.site",
+"CART_PORT" : "8080",
+"SHIPPING_HOST" : "shipping-dev.santoshpawar.site",
+"SHIPPING_PORT" : "8080",
 }
 EOT
 }
 
 # "payment":   "http://payment-dev.santoshpawar.site:8080/" ## remove from above block
+# "PAYMENT_HOST" : "payment-dev.santoshpawar.site",
+# "PAYMENT_PORT" : "8080"
+
 
 # resource "vault_generic_secret" "roboshop-dev-payment" {
 #   path = "${vault_mount.roboshop-dev.path}/payment"
@@ -99,6 +114,10 @@ resource "vault_generic_secret" "roboshop-dev-shipping" {
 {
 "CART_ENDPOINT" : "cart-dev.santoshpawar.site:8080",
 "DB_HOST" : "mysql-dev.santoshpawar.site"
+"DB_TYPE" : "mysql",
+"APP_GIT_URL" : "https://github.com/roboshop-devops-project-v3/shipping",
+"DB_USER" : "root",
+"DB_PASS" : "RoboShop@1"
 }
 EOT
 }
