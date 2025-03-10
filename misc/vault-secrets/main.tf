@@ -113,7 +113,7 @@ resource "vault_generic_secret" "roboshop-dev-shipping" {
   data_json = <<EOT
 {
 "CART_ENDPOINT" : "cart-dev.santoshpawar.site:8080",
-"DB_HOST" : "mysql-dev.santoshpawar.site"
+"DB_HOST" : "mysql-dev.santoshpawar.site",
 "DB_TYPE" : "mysql",
 "APP_GIT_URL" : "https://github.com/roboshop-devops-project-v3/shipping",
 "DB_USER" : "root",
