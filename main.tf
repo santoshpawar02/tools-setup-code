@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "testtfbuc"
+    bucket = "testtfbuc22"
     key = "tools/state"
     region = "us-east-1"
     }
@@ -11,7 +11,7 @@ variable "ami_id" {
 }
 
 variable "zone_id" {
-  default = "Z04737393V7TL5KD0WFM2"
+  default = "Z02736512QSL4WC8HVEJV"
 }
 
 variable "tools" {
