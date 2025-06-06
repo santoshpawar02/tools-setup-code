@@ -20,8 +20,13 @@ variable "tools" {
       instance_type = "t2.small"
       port = 8200
     }
+    github-runner = {
+      instance_type = "t2.small"
+      port = 443 #Dummy port
+    }
   }
-}
+  }
+
 
 module "tool-infra" {
   source = "./module-infra"
