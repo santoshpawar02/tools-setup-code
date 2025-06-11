@@ -92,7 +92,7 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "CART_HOST" : "cart-dev.santoshpawar.site",
 "CART_PORT" : "8080",
 "SHIPPING_HOST" : "shipping-dev.santoshpawar.site",
-"SHIPPING_PORT" : "8080"
+"SHIPPING_PORT" : "8080",
 "PAYMENT_HOST" : "payment-dev.santoshpawar.site",
 "PAYMENT_PORT" : "8080"
 }
