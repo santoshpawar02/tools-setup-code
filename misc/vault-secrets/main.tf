@@ -84,6 +84,7 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
 "shipping":   "http://shipping-dev.santoshpawar.site:8080/",
+"payment":   "http://payment-dev.santoshpawar.site:8080/"
 "CATALOGUE_HOST" : "catalogue-dev.santoshpawar.site",
 "CATALOGUE_PORT" : "8080",
 "USER_HOST" : "user-dev.santoshpawar.site",
@@ -92,7 +93,6 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "CART_PORT" : "8080",
 "SHIPPING_HOST" : "shipping-dev.santoshpawar.site",
 "SHIPPING_PORT" : "8080"
-"payment":   "http://payment-dev.santoshpawar.site:8080/" ## remove from above block
 "PAYMENT_HOST" : "payment-dev.santoshpawar.site",
 "PAYMENT_PORT" : "8080"
 }
