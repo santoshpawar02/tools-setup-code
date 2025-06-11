@@ -84,7 +84,7 @@ resource "vault_generic_secret" "roboshop-dev-frontend" {
 "user":   "http://user-dev.santoshpawar.site:8080/",
 "cart":   "http://cart-dev.santoshpawar.site:8080/",
 "shipping":   "http://shipping-dev.santoshpawar.site:8080/",
-"payment":   "http://payment-dev.santoshpawar.site:8080/"
+"payment":   "http://payment-dev.santoshpawar.site:8080/",
 "CATALOGUE_HOST" : "catalogue-dev.santoshpawar.site",
 "CATALOGUE_PORT" : "8080",
 "USER_HOST" : "user-dev.santoshpawar.site",
