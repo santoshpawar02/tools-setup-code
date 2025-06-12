@@ -16,14 +16,6 @@ resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
   description   = "ssh"
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_all" {
-  security_group_id = aws_security_group.tool.id
-  cidr_ipv4 = "0.0.0.0/0"
-  from_port = "all"
-  ip_protocol = "all"
-  to_port = "all"
-  description   = "All traffic"
-}
 
 resource "aws_vpc_security_group_ingress_rule" "app_port" {
   security_group_id = aws_security_group.tool.id
